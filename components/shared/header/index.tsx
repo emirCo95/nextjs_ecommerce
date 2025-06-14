@@ -1,10 +1,11 @@
 import React from 'react';
-import { ShoppingCartIcon, UserIcon } from 'lucide-react';
+
 import Image from 'next/image';
 import Link from 'next/link';
-import { Button } from '@/components/ui/button';
+
 import { APP_NAME } from '@/lib/constants';
-import ModeToggle from './mode-toggle';
+
+import Menu from './menu';
 
 const Header = () => {
   return (
@@ -24,19 +25,8 @@ const Header = () => {
             </span>
           </Link>
         </div>
-        <div className="flex items-center space-x-2">
-          <ModeToggle />
-          <Button asChild variant="ghost">
-            <Link href="/cart">
-              <ShoppingCartIcon /> Cart
-            </Link>
-          </Button>
-          <Button asChild>
-            <Link href="/sign-in">
-              <UserIcon /> Sign In
-            </Link>
-          </Button>
-        </div>
+
+        <Menu />
       </div>
     </header>
   );
