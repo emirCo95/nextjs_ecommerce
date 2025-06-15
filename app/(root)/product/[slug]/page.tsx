@@ -61,6 +61,13 @@ const ProductDetailsPage = async (props: {
                     <Badge variant="destructive">Out of Stock</Badge>
                   )}
                 </div>
+                {product.stock > 0 && (
+                  <div className="flex-center">
+                    <Button variant="default" className="w-full mt-5">
+                      Add to Cart
+                    </Button>
+                  </div>
+                )}
               </CardContent>
             </Card>
           </div>
