@@ -3,22 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import ProductPrice from './product-price';
-import { Decimal } from '@prisma/client/runtime/library';
-
-type Product = {
-  name: string;
-  slug: string;
-  category: string;
-  description: string;
-  images: string[];
-  price: Decimal;
-  brand: string;
-  rating: Decimal;
-  numReviews: number;
-  stock: number;
-  isFeatured: boolean;
-  banner: string | null;
-};
+import { Product } from '@/types';
 
 const ProductCard = ({ product }: { product: Product }) => {
   return (

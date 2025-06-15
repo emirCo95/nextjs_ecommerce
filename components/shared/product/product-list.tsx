@@ -1,21 +1,6 @@
 import React from 'react';
 import ProductCard from './product-card';
-import { Decimal } from '@prisma/client/runtime/library';
-
-type Product = {
-  name: string;
-  slug: string;
-  category: string;
-  description: string;
-  images: string[];
-  price: Decimal;
-  brand: string;
-  rating: Decimal;
-  numReviews: number;
-  stock: number;
-  isFeatured: boolean;
-  banner: string | null;
-};
+import { Product } from '@/types';
 
 const ProductList = ({
   data,
