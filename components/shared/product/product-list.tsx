@@ -1,5 +1,6 @@
 import React from 'react';
 import ProductCard from './product-card';
+import { Decimal } from '@prisma/client/runtime/library';
 
 type Product = {
   name: string;
@@ -7,9 +8,9 @@ type Product = {
   category: string;
   description: string;
   images: string[];
-  price: number;
+  price: Decimal;
   brand: string;
-  rating: number;
+  rating: Decimal;
   numReviews: number;
   stock: number;
   isFeatured: boolean;

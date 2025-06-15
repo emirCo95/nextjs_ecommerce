@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import ProductPrice from './product-price';
+import { Decimal } from '@prisma/client/runtime/library';
 
 type Product = {
   name: string;
@@ -10,9 +11,9 @@ type Product = {
   category: string;
   description: string;
   images: string[];
-  price: number;
+  price: Decimal;
   brand: string;
-  rating: number;
+  rating: Decimal;
   numReviews: number;
   stock: number;
   isFeatured: boolean;
